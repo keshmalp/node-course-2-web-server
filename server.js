@@ -42,6 +42,11 @@ app.get('/',(req,res)=> {
     pageTitle:'Ye tune thik nahi kiya'
   });
 });
+app.get('/about',(req,res)=> {
+  res.render('about.hbs',{
+    pageTitle:'Ye tune thik kiya'
+  });
+});
 app.get('/project',(req,res)=> {
   res.render('project.hbs',{
     pageTitle:'Ye kya ho gaya'
