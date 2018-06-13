@@ -2,6 +2,8 @@ const express=require('express');
 const hbs=require('hbs');
 const path=require('path');
 const fs=require('fs');
+const port=process.env.PORT||3000;
+
 
 var app=express();
 
@@ -45,4 +47,7 @@ app.get('/about',(req,res)=> {
     pageTitle:'Ye tune thik kiya'
   });
 });
-app.listen(8000);
+app.listen(port,()=>
+{
+  console.log(`The server is on at ${port} port`)
+});
